@@ -45,7 +45,7 @@ protected function getUniqueNumber($sBuildNumber, $sTestSuite = '')
 
         if ($iUniqueId == -1 || strlen($mOutput) == 0) {
             sleep(10);
-            return getUniqueNumber($sBuildNumber, $sTestSuite);
+            return $this->getUniqueNumber($sBuildNumber, $sTestSuite);
         }
         return $iUniqueId;
     }
